@@ -29,3 +29,8 @@ authors = [
   author = 'Name of original author'
   homepage = 'Website of original author'
   repo = 'https://github.com/owner/repo'
+
+[requirements]
+  # NOTE: css.TailwindCSS was added in v0.128.0.
+  # See: https://gohugo.io/functions/css/tailwindcss/
+  hugoVersion = '0.128.0'
