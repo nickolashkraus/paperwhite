@@ -12,7 +12,7 @@
 
 {{- with index site.Menus $menuID }}
   <nav>
-    <ul>
+    <ul class="flex list-none flex-row space-x-6 pb-8 opacity-75">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
   </nav>
@@ -35,6 +35,7 @@
     {{- end }}
     <li>
       <a
+        class="hover:underline"
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}

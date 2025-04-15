@@ -3,15 +3,12 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body>
+  <body class="m-auto max-w-2xl font-serif">
     <header>
       {{ partial "header.html" . }}
     </header>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
   </body>
 </html>

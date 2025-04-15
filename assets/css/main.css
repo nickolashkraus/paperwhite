@@ -1,5 +1,19 @@
+/*
+ * Load font Google Fonts.
+ *
+ * NOTE: Browsers require that @import statements come before any other rules,
+ * so URL imports need to be above imports like @import "tailwindcss" which are
+ * inlined in the compiled CSS.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+
 /* Include Tailwind CSS */
 @import 'tailwindcss';
 
 /* Facilitate PurgeCSS integration */
-@source "hugo_stats.json";
+@source 'hugo_stats.json';
+
+@theme {
+  --font-serif: var(--font-newsreader);
+  --font-newsreader: 'Newsreader', serif;
+}
