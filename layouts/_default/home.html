@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <div class="flex">
-    <div class="grid grid-cols-1 gap-8 pb-16">
+  <div class="m-auto flex max-w-2xl">
+    <div class="grid grid-cols-1 gap-8">
       {{ range site.RegularPages }}
         {{ .Render "summary" }}
       {{ end }}

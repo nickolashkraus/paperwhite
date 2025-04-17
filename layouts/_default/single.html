@@ -1,13 +1,24 @@
 {{ define "main" }}
-  <div class="grid grid-cols-1 pb-16">
-    <h1 class="pb-4 text-4xl">{{ .Title }}</h1>
-    <div class="pb-2 opacity-50">
-      {{ partial "date.html" . }}
-    </div>
-    <div class="markdown">
-      <article>
-        {{ .Content }}
-      </article>
+  <div class="m-auto flex max-w-2xl lg:max-w-4xl">
+    <div class="grid grid-cols-12 gap-4">
+      <div class="hidden lg:col-span-2 lg:ml-4 lg:block">
+        <aside class="fixed max-h-screen w-40 overflow-x-hidden overflow-y-auto">
+          <h2 class="pb-4 text-2xl">Contents</h2>
+          <div class="max-w-full overflow-hidden break-words">
+            {{ .TableOfContents }}
+          </div>
+        </aside>
+      </div>
+      <div class="hidden lg:col-span-1 lg:block"></div>
+      <main class="col-span-12 lg:col-span-9">
+        <h1 class="pb-4 text-4xl">{{ .Title }}</h1>
+        <div class="pb-2 opacity-50">
+          {{ partial "date.html" . }}
+        </div>
+        <article class="markdown prose">
+          {{ .Content }}
+        </article>
+      </main>
     </div>
   </div>
 {{ end }}
