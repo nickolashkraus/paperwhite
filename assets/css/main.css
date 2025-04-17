@@ -10,6 +10,9 @@
 /* Include Tailwind CSS */
 @import 'tailwindcss';
 
+/* Include Tailwind CSS Typography plugin */
+@plugin "@tailwindcss/typography";
+
 /* Facilitate PurgeCSS integration */
 @source 'hugo_stats.json';
 
