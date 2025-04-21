@@ -1,8 +1,8 @@
 /*
- * Load font Google Fonts.
+ * Load Google Fonts.
  *
  * NOTE: Browsers require that @import statements come before any other rules,
- * so URL imports need to be above imports like @import "tailwindcss" which are
+ * so URL imports need to be above imports like @import 'tailwindcss' which are
  * inlined in the compiled CSS.
  */
 @import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
@@ -11,25 +11,68 @@
 @import 'tailwindcss';
 
 /* Include Tailwind CSS Typography plugin */
-@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/typography';
 
 /* Facilitate PurgeCSS integration */
 @source 'hugo_stats.json';
 
 @theme {
+  /* Override */
   --font-serif: var(--font-newsreader);
+  --color-white: var(--color-ivory-medium);
+  --color-black: var(--color-slate-dark);
+
+  /* Typography */
   --font-newsreader: 'Newsreader', serif;
+
+  /* Custom */
+  --color-tooltip-bg-white: var(--color-ivory-light);
+  --color-tooltip-text-black: var(--color-slate-medium);
+
+  /* Colorscheme */
+  --color-slate-dark: #1f1e1d;
+  --color-slate-medium: #3d3d3a;
+  --color-slate-light: #5e5d59;
+
+  --color-cloud-dark: #87867f;
+  --color-cloud-medium: #b0aea5;
+  --color-cloud-light: #d1cfc5;
+
+  --color-ivory-dark: #e8e6dc;
+  --color-ivory-medium: #f0eee6;
+  --color-ivory-light: #faf9f5;
 }
 
-/*
- * Styling for Hugo generated table of contents.
- *
- * See: https://gohugo.io/methods/page/tableofcontents/
- */
-#TableOfContents a {
-  @apply opacity-50 transition-opacity duration-200 hover:opacity-100;
-}
+@layer components {
+  /*
+  * Styling for Hugo generated table of contents.
+  *
+  * See: https://gohugo.io/methods/page/tableofcontents/
+  */
+  #TableOfContents a {
+    @apply opacity-50 transition-opacity duration-200 hover:opacity-100;
+  }
 
-#TableOfContents a.active {
-  @apply opacity-100;
+  #TableOfContents a.active {
+    @apply opacity-100;
+  }
+
+  /*
+   * Styling for footnote tooltips.
+   *
+   * See: https://github.com/cosbgn/tailwindcss-tooltips
+   */
+  .footnote-tooltip {
+    @apply invisible absolute mt-4 -ml-40 w-80 p-2 shadow;
+    background-color: var(--color-tooltip-bg-white);
+    color: var(--color-tooltip-text-black);
+  }
+
+  .footnote-tooltip p {
+    @apply m-0 p-5;
+  }
+
+  .has-footnote-tooltip:hover .footnote-tooltip {
+    @apply visible z-50;
+  }
 }
