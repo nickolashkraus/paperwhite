@@ -21,3 +21,18 @@ theme = 'paperwhite'
 ```
 
 ## Configuration
+
+## Development
+
+Install Node packages:
+
+```bash
+npm install
+```
+
+Run Hugo server:
+
+```bash
+cd exampleSite/
+hugo server --themesDir ../..
+```
