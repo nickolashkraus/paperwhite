@@ -3,6 +3,11 @@ languageCode = 'en-US'
 title = 'Paperwhite'
 theme = 'paperwhite'
 
+[markup]
+  [markup.highlight]
+    # Disable syntax highlighting.
+    noClasses = false
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'

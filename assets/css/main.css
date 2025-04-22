@@ -6,6 +6,7 @@
  * inlined in the compiled CSS.
  */
 @import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 
 /* Include Tailwind CSS */
 @import 'tailwindcss';
@@ -19,15 +20,19 @@
 @theme {
   /* Override */
   --font-serif: var(--font-newsreader);
+  --font-mono: var(--font-anonymous-pro);
   --color-white: var(--color-ivory-medium);
   --color-black: var(--color-slate-dark);
 
   /* Typography */
   --font-newsreader: 'Newsreader', serif;
+  --font-anonymous-pro: 'Anonymous Pro', monospace;
 
   /* Custom */
-  --color-tooltip-bg-white: var(--color-ivory-light);
-  --color-tooltip-text-black: var(--color-slate-medium);
+  --color-tooltip-bg: var(--color-ivory-light);
+  --color-tooltip-text: var(--color-slate-medium);
+  --color-code-bg: var(--color-ivory-dark);
+  --color-code-text: var(--color-slate-light);
 
   /* Colorscheme */
   --color-slate-dark: #1f1e1d;
@@ -43,12 +48,23 @@
   --color-ivory-light: #faf9f5;
 }
 
+@layer typography {
+  .prose {
+    --tw-prose-pre-bg: var(--color-code-bg);
+    --tw-prose-pre-code: var(--color-code-text);
+  }
+
+  .prose pre {
+    line-height: 1.25;
+  }
+}
+
 @layer components {
   /*
-  * Styling for Hugo generated table of contents.
-  *
-  * See: https://gohugo.io/methods/page/tableofcontents/
-  */
+   * Styling for Hugo generated table of contents.
+   *
+   * See: https://gohugo.io/methods/page/tableofcontents/
+   */
   #TableOfContents a {
     @apply opacity-50 transition-opacity duration-200 hover:opacity-100;
   }
@@ -64,8 +80,8 @@
    */
   .footnote-tooltip {
     @apply invisible absolute mt-4 -ml-40 w-80 p-2 shadow;
-    background-color: var(--color-tooltip-bg-white);
-    color: var(--color-tooltip-text-black);
+    background-color: var(--color-tooltip-bg);
+    color: var(--color-tooltip-text);
   }
 
   .footnote-tooltip p {
