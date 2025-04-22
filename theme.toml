@@ -1,34 +1,14 @@
-name = 'Theme name'
+name = 'Paperwhite'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+licenselink = 'https://github.com/nickolashkraus/paperwhite/blob/master/LICENSE'
+description = 'A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript'
+homepage = 'https://github.com/nickolashkraus/paperwhite'
+demosite = 'https://static-website.com'
+tags = ['blog', 'minimal', 'light', 'tailwind']
 
-# The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
-
-# If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
-
-# Taxonomy terms
-tags = ['blog', 'company']
-features = ['some', 'awesome', 'features']
-
-# If the theme has multiple authors
-authors = [
-  {name = 'Name of author', homepage = 'Website of author'},
-  {name = 'Name of author', homepage = 'Website of author'}
-]
-
-# If the theme has a single author
 [author]
-  name = 'Your name'
-  homepage = 'Your website'
-
-# If porting an existing theme
-[original]
-  author = 'Name of original author'
-  homepage = 'Website of original author'
-  repo = 'https://github.com/owner/repo'
+  name = 'Nickolas Kraus'
+  homepage = 'https://nickolaskraus.io'
 
 [requirements]
   # NOTE: css.TailwindCSS was added in v0.128.0.
