@@ -1,7 +1,23 @@
-# Theme Name
+# Paperwhite
+
+A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript.
 
 ## Features
 
+- Tailwind CSS
+- Footnote reference tooltip
+- Table of contents scrollspy
+
 ## Installation
+
+```bash
+git submodule add git@github.com:nickolashkraus/paperwhite.git themes/paperwhite
+```
+
+`hugo.toml`
+
+```toml
+theme = 'paperwhite'
+```
 
 ## Configuration
