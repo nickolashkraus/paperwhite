@@ -57,6 +57,15 @@
   .prose pre {
     line-height: 1.25;
   }
+
+  /* Remove backticks around `code` elements. */
+  .prose code::after {
+    content: none;
+  }
+
+  .prose code::before {
+    content: none;
+  }
 }
 
 @layer components {
