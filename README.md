@@ -22,6 +22,8 @@ theme = 'paperwhite'
 
 ## Configuration
 
+None
+
 ## Development
 
 Install Node packages:
