@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://paperwhite.nickolaskraus.io'
 languageCode = 'en-US'
 title = 'Paperwhite'
 theme = 'paperwhite'
@@ -14,14 +14,9 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Docs'
+pageRef = '/docs'
 weight = 20
-
-[[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
 
 [build]
   [build.buildStats]
