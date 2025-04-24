@@ -8,8 +8,8 @@
     </div>
   {{ end }}
   {{ if .Params.description }}
-    <div class="pb-2">
-      {{ .Params.description }}
+    <div class="markdown prose footnotes-hidden pb-2">
+      {{ .Params.description | markdownify }}
     </div>
   {{ else }}
     {{ .Summary }}

@@ -68,6 +68,15 @@
   }
 }
 
+/*
+ * Custom utility for hiding footnotes section.
+ */
+@utility footnotes-hidden {
+  .footnotes {
+    display: none;
+  }
+}
+
 @layer components {
   /*
    * Styling for Hugo generated table of contents.
