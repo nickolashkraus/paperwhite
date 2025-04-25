@@ -37,7 +37,7 @@
  *     </sup>
  *   </span>
  *
- * The contents for the tooltip is retrieved from the content for the footnote
+ * The content for the tooltip is retrieved from the content for the footnote
  * located in the "footnotes" section:
  *
  *   <!-- Footnote reference + tooltip with content -->

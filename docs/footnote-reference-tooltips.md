@@ -37,7 +37,7 @@ wrapped by a `<span>` with the `has-footnote-tooltip` class:
 </span>
 ```
 
-The contents for the tooltip is retrieved from the content for the footnote
+The content for the tooltip is retrieved from the content for the footnote
 located in the "footnotes" section:
 
 ```html
@@ -100,7 +100,7 @@ all footnote reference tooltips and adds them to the DOM.
 [^1]: Luxury is more than just expensive things. it's an experience, a feeling.
     It's the whisper of silk against your skin, the subtle aroma of a
     hand-crafted perfume, the impeccable service that anticipates your every
-    need. True luxury is about quality, craftsmanship. and a sense of
+    need. True luxury is about quality, craftsmanship, and a sense of
     effortless ease. It's not about showing off wealth, but about indulging in
     the finer things in life, savoring the details, and appreciating the
     artistry involved in creating something truly exceptional. It's a state of
