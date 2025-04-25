@@ -114,13 +114,21 @@
     @apply opacity-100;
   }
 
+  #TableOfContents ul {
+    @apply space-y-2;
+  }
+
+  #TableOfContents ul ul {
+    @apply mt-2;
+  }
+
   /*
    * Styling for footnote tooltips.
    *
    * See: https://github.com/cosbgn/tailwindcss-tooltips
    */
   .footnote-tooltip {
-    @apply invisible absolute mt-4 -ml-40 w-80 p-2 shadow;
+    @apply invisible absolute mt-4 -ml-40 w-80 p-2 text-sm shadow;
     background-color: var(--color-tooltip-bg);
     color: var(--color-tooltip-text);
   }
