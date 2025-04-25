@@ -10,7 +10,7 @@
  *   }
  *
  *   .has-footnote-tooltip:hover .footnote-tooltip {
- *     @apply visible z-50
+ *     @apply visible z-50;
  *   }
  *
  * How does it work?
