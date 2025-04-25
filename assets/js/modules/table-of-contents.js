@@ -154,19 +154,25 @@ const highlightActiveTocItem = (tocLinks, headings) => {
 
   // The next heading only supercedes the previous heading if the top of the
   // previous heading is negative (i.e., above the viewport) and the current
-  // heading is within 20px. This has the effect of only updating the TOC link
-  // when the next heading supercedes the previous heading.
+  // heading is within 25% of the top of the window. This has the effect of
+  // only updating the TOC link when the next heading supercedes the previous
+  // heading.
   let prevOffsetTop = Infinity
   headings.forEach((heading) => {
     const rect = heading.getBoundingClientRect()
     const offsetTop = rect.top
 
-    if (!currentHeadingId || (prevOffsetTop < 0 && offsetTop <= 20)) {
+    if (!currentHeadingId || (prevOffsetTop < 0 && offsetTop <= window.innerHeight * 0.25)) {
       currentHeadingId = heading.id
     }
 
     prevOffsetTop = offsetTop
   })
+
+  // Use the last heading if the page is scrolled to the bottom.
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1) {
+    currentHeadingId = headings[headings.length - 1].id
+  }
 
   // Remove active class from all links.
   tocLinks.forEach((link) => {
