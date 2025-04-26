@@ -8,7 +8,7 @@
     </div>
   {{ end }}
   {{ if .Params.description }}
-    <div class="markdown prose footnotes-hidden pb-2">
+    <div class="markdown prose footnotes-hidden w-full max-w-none pb-2">
       {{ .Params.description | markdownify }}
     </div>
   {{ else }}

@@ -21,8 +21,6 @@
   /* Override */
   --font-serif: var(--font-newsreader);
   --font-mono: var(--font-anonymous-pro);
-  --color-white: var(--color-ivory-medium);
-  --color-black: var(--color-slate-dark);
 
   /* Typography */
   --font-newsreader: 'Newsreader', serif;
@@ -124,8 +122,6 @@
 
   /*
    * Styling for footnote tooltips.
-   *
-   * See: https://github.com/cosbgn/tailwindcss-tooltips
    */
   .footnote-tooltip {
     @apply invisible absolute mt-4 -ml-40 w-80 p-2 text-sm shadow;

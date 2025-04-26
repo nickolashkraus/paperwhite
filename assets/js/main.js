@@ -2,7 +2,7 @@ import { initFootnoteTooltips } from './modules/footnote-tooltips.js'
 import { initTableOfContents } from './modules/table-of-contents.js'
 
 /**
- * Main JavaScript initialization
+ * Main JavaScript initialization.
  */
 const initMain = () => {
   initFootnoteTooltips()

@@ -3,7 +3,7 @@ license = 'MIT'
 licenselink = 'https://github.com/nickolashkraus/paperwhite/blob/master/LICENSE'
 description = 'A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript'
 homepage = 'https://github.com/nickolashkraus/paperwhite'
-demosite = 'https://static-website.com'
+demosite = 'https://paperwhite.nickolaskraus.io'
 tags = ['blog', 'minimal', 'light', 'tailwind']
 
 [author]

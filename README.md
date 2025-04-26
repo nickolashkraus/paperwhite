@@ -5,7 +5,7 @@ A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript.
 ## Features
 
 - Tailwind CSS
-- Footnote reference tooltip
+- Footnote reference tooltips
 - Table of contents scrollspy
 
 ## Installation

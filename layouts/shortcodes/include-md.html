@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 {{- /*
-  Read the contents of a Markdown file.
+  Read the contents of a Markdown file and render as HTML.
 
   Removes the first line of the Markdown file if it starts with '#'.
 
@@ -23,4 +23,4 @@
 {{ if hasPrefix $firstLine "#" }}
   {{ $content = delimit (after 1 $lines) "\n" }}
 {{ end }}
-{{ $content  | safeHTML }}
+{{ $content | safeHTML }}
