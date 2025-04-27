@@ -20,6 +20,12 @@ git submodule add git@github.com:nickolashkraus/paperwhite.git themes/paperwhite
 theme = 'paperwhite'
 ```
 
+Install Node packages:
+
+```bash
+npm install --save-dev tailwindcss @tailwindcss/cli @tailwindcss/typography
+```
+
 ## Configuration
 
 None
