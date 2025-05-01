@@ -7,9 +7,9 @@
       {{ partial "date.html" . }}
     </div>
   {{ end }}
-  {{ if .Params.description }}
+  {{ if .Description }}
     <div class="markdown prose footnotes-hidden w-full max-w-none pb-2">
-      {{ .Params.description | markdownify }}
+      {{ .Description | markdownify }}
     </div>
   {{ else }}
     {{ .Summary }}
