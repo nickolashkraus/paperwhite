@@ -32,6 +32,7 @@
   --color-code-bg: var(--color-ivory-dark);
   --color-code-text: var(--color-slate-light);
   --color-hr: var(--color-slate-light);
+  --color-prose-bullets: var(--color-slate-light);
 
   /* Colorscheme */
   --color-slate-dark: #1f1e1d;
@@ -52,6 +53,7 @@
     --tw-prose-pre-bg: var(--color-code-bg);
     --tw-prose-pre-code: var(--color-code-text);
     --tw-prose-hr: var(--color-hr);
+    --tw-prose-bullets: var(--color-prose-bullets);
   }
 
   .prose pre {
