@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <div class="m-auto max-w-2xl">
+    <div class="grid grid-cols-1 gap-8">
+      {{ range .Pages }}
+        <h2 class="pb-4 text-4xl">
+          <a class="hover:underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}
