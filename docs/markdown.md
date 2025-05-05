@@ -94,13 +94,13 @@ _Also italic text_
 ***Bold and italic text***  
 ___Also bold and italic text___  
 __*Bold and italic mixed*__  
-**_Also bold and italic mixed_**  
+**_Also bold and italic mixed_**
 ```
 
 ***Bold and italic text***  
 ___Also bold and italic text___  
 __*Bold and italic mixed*__  
-**_Also bold and italic mixed_**  
+**_Also bold and italic mixed_**
 
 ### Blockquotes
 
@@ -111,7 +111,8 @@ __*Bold and italic mixed*__
 > line between them.
 
 > Nested blockquotes
->> Can be created like this.
+>
+> > Can be created like this.
 ```
 
 > This is a blockquote.
@@ -120,7 +121,8 @@ __*Bold and italic mixed*__
 > line between them.
 
 > Nested blockquotes
->> Can be created like this.
+>
+> > Can be created like this.
 
 ### Lists
 
@@ -130,8 +132,8 @@ __*Bold and italic mixed*__
 1. First item
 2. Second item
 3. Third item
-    1. Indented item
-    2. Another indented item
+   1. Indented item
+   2. Another indented item
 4. Fourth item
 ```
 
@@ -148,12 +150,13 @@ __*Bold and italic mixed*__
 - First item
 - Second item
 - Third item
-    - Indented item
-    - Another indented item
+  - Indented item
+  - Another indented item
 - Fourth item
 
 * You can also use asterisks
-+ Or plus signs
+
+- Or plus signs
 ```
 
 - First item
@@ -164,7 +167,8 @@ __*Bold and italic mixed*__
 - Fourth item
 
 * You can also use asterisks
-+ Or plus signs
+
+- Or plus signs
 
 ### Code
 
@@ -302,14 +306,15 @@ Use a backslash to escape Markdown formatting characters.
 ```markdown
 \* This is not italic \*  
 \# This is not a heading  
-\- This is not a list item  
+\- This is not a list item
 ```
 
 \* This is not italic \*  
 \# This is not a heading  
-\- This is not a list item  
+\- This is not a list item
 
 Characters you can escape:
+
 ```
 \ backslash
 ` backtick
@@ -332,13 +337,13 @@ _ underscore
 
 ```markdown
 | Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   |
 ```
 
 | Header 1 | Header 2 | Header 3 |
-|----------|----------|----------|
+| -------- | -------- | -------- |
 | Cell 1   | Cell 2   | Cell 3   |
 | Cell 4   | Cell 5   | Cell 6   |
 
@@ -346,15 +351,15 @@ You can align columns:
 
 ```markdown
 | Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| Left         | Center         | Right         |
-| aligned      | aligned        | aligned       |
+| :----------- | :------------: | ------------: |
+| Left         |     Center     |         Right |
+| aligned      |    aligned     |       aligned |
 ```
 
 | Left-aligned | Center-aligned | Right-aligned |
-|:-------------|:--------------:|--------------:|
-| Left         | Center         | Right         |
-| aligned      | aligned        | aligned       |
+| :----------- | :------------: | ------------: |
+| Left         |     Center     |         Right |
+| aligned      |    aligned     |       aligned |
 
 ### Fenced Code Blocks
 
@@ -451,6 +456,7 @@ Some Markdown processors support text highlighting:
 ```markdown
 ==Highlighted text==
 ```
+
 ### Subscript and Superscript
 
 Some Markdown processors support subscript and superscript:
@@ -497,10 +503,10 @@ There are several Markdown flavors (or extensions) with additional features:
 
 1. **CommonMark** - A standard, unambiguous syntax specification for Markdown.
 2. **GitHub Flavored Markdown (GFM)** - Used on GitHub with features like
-tables, strikethrough, and task lists.
+   tables, strikethrough, and task lists.
 3. **MultiMarkdown** - Adds features like tables, footnotes, and citations.
 4. **Markdown Extra** - Adds features like tables, footnotes, and definition
-lists.
+   lists.
 5. **R Markdown** - For documents that include R code and its output.
 6. **Pandoc's Markdown** - A highly extensible version used by the document
-converter Pandoc.
+   converter Pandoc.

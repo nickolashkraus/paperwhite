@@ -17,6 +17,7 @@ Hugo (via Goldmark) renders footnotes references as `<sup>` elements with the
 following form:
 
 **HTML**
+
 ```html
 <sup id="fnref:1">
   <a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a>
@@ -97,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
 The module exports a single function, `initFootnoteTooltips()`, which creates
 all footnote reference tooltips and adds them to the DOM.
 
-[^1]: Luxury is more than just expensive things. it's an experience, a feeling.
-    It's the whisper of silk against your skin, the subtle aroma of a
-    hand-crafted perfume, the impeccable service that anticipates your every
-    need. True luxury is about quality, craftsmanship, and a sense of
-    effortless ease. It's not about showing off wealth, but about indulging in
-    the finer things in life, savoring the details, and appreciating the
-    artistry involved in creating something truly exceptional. It's a state of
-    being, a mindful appreciation for the exquisite.
+[^1]:
+    Luxury is more than just expensive things. it's an experience, a feeling.
+    It's the whisper of silk against your skin, the subtle aroma of a hand-crafted
+    perfume, the impeccable service that anticipates your every need. True luxury
+    is about quality, craftsmanship, and a sense of effortless ease. It's not about
+    showing off wealth, but about indulging in the finer things in life, savoring
+    the details, and appreciating the artistry involved in creating something truly
+    exceptional. It's a state of being, a mindful appreciation for the exquisite.

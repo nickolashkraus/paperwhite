@@ -20,6 +20,7 @@ Hugo renders a table of contents when the `{{ .TableOfContents }}` template
 code is used. The table of contents has the following form:
 
 **HTML**
+
 ```html
 <nav id="TableOfContents">
   <ul>

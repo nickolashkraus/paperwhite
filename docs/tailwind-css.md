@@ -46,6 +46,7 @@ generating the corresponding styles and then writing them to a static CSS file.
 ```
 
 This configuration enables key optimizations when using Tailwind CSS with Hugo:
+
 1. Hugo generates a `hugo_stats.json` file (used by Tailwind CSS for PurgeCSS).
 2. Enables cache busting when changes to the CSS are made via Tailwind.
 
