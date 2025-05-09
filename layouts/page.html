@@ -1,4 +1,9 @@
 {{ define "main" }}
+  <!-- Only show a table of contents if it exists. -->
+  {{ $tocLength := findRE "<li>" .TableOfContents | len }}
+  {{ $hasTOC := gt $tocLength 0 }}
+
+  {{ if $hasTOC }}
   <div class="m-auto max-w-2xl lg:max-w-4xl">
     <div class="grid grid-cols-12 gap-4">
       <div class="hidden lg:col-span-2 lg:ml-4 lg:block">
@@ -11,6 +16,10 @@
       </div>
       <div class="hidden lg:col-span-1 lg:block"></div>
       <main class="col-span-12 lg:col-span-9">
+    {{ else }}
+    <div class="m-auto max-w-2xl">
+      <main class="col-span-12">
+    {{ end }}
         <h1 class="pb-4 text-4xl">{{ .Title }}</h1>
         {{ if .Date }}
           <div class="pb-2 opacity-50">
