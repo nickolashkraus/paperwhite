@@ -99,7 +99,7 @@
   }
 
   #TableOfContents ul ul {
-    @apply mt-2;
+    @apply mt-2 pl-3;
   }
 
   /* Add margin between top-level <ul> elements. */
