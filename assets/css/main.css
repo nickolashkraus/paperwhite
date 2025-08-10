@@ -123,6 +123,33 @@
   .has-footnote-tooltip:hover .footnote-tooltip {
     @apply visible z-50;
   }
+
+  /*
+   * Styling for scrollbars.
+   */
+  html {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-cloud-medium) var(--color-ivory-medium);
+  }
+
+  /* Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-ivory-medium);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-cloud-medium);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-cloud-medium);
+  }
 }
 
 /*
