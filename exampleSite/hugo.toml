@@ -8,6 +8,10 @@ theme = 'paperwhite'
     # Disable syntax highlighting.
     noClasses = false
 
+# Google Analytics measurement ID (Google Analytics 4)
+# [services]
+#   [services.googleAnalytics]
+#     id = 'G-MEASUREMENT_ID'
 [[menus.main]]
 name = 'Home'
 pageRef = '/'

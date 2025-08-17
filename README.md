@@ -7,6 +7,7 @@ A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript.
 - Tailwind CSS
 - Footnote reference tooltips
 - Table of contents scrollspy
+- Google Analytics
 
 ## Installation
 
@@ -28,7 +29,16 @@ npm install --save-dev tailwindcss @tailwindcss/cli @tailwindcss/typography
 
 ## Configuration
 
-None
+### Google Analytics
+
+To add support for Google Analytics, add the following to your configuration
+file:
+
+```toml
+[services]
+  [services.googleAnalytics]
+    id = 'G-MEASUREMENT_ID'
+```
 
 ## Development
 
