@@ -26,6 +26,16 @@ theme = 'paperwhite'
     twitter_site = '@nickolashkraus'
     twitter_creator = '@nickolashkraus'
 
+  [[params.socials]]
+    icon = 'fa-sharp fa-regular fa-envelope'
+    name = 'Email'
+    url = 'mailto:0x@nickolaskraus.io'
+
+  [[params.socials]]
+    icon = 'fa-brands fa-github'
+    name = 'GitHub'
+    url = 'https://github.com/nickolashkraus/paperwhite'
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'

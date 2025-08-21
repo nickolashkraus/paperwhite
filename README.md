@@ -9,6 +9,7 @@ A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript.
 - Table of contents scrollspy
 - Google Analytics
 - Search Engine Optimization (SEO)
+- Social Links (with Font Awesome icons)
 
 ## Installation
 
@@ -48,6 +49,17 @@ best practices with sensible fallbacks.
 
 For documentation on configuring SEO and social media appearance, see the
 [documentation](docs/search-engine-optimization.md).
+
+## Social Links (with Font Awesome icons)
+
+Social links (with Font Awesome icons) can be added via the configuration file.
+
+```toml
+[[params.socials]]
+  icon = 'fa-sharp fa-regular fa-envelope'
+  name = 'Email'
+  url = 'mailto:0x@nickolaskraus.io'
+```
 
 ## Development
 
