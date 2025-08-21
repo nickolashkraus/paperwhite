@@ -8,6 +8,7 @@ A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript.
 - Footnote reference tooltips
 - Table of contents scrollspy
 - Google Analytics
+- Search Engine Optimization (SEO)
 
 ## Installation
 
@@ -39,6 +40,14 @@ file:
   [services.googleAnalytics]
     id = 'G-MEASUREMENT_ID'
 ```
+
+### Search Engine Optimization (SEO)
+
+This theme provides intelligent configuration of SEO meta tags that adhere to
+best practices with sensible fallbacks.
+
+For documentation on configuring SEO and social media appearance, see the
+[documentation](docs/search-engine-optimization.md).
 
 ## Development
 

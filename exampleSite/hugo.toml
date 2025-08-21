@@ -1,6 +1,9 @@
 baseURL = 'https://paperwhite.nickolaskraus.io'
 languageCode = 'en-US'
 title = 'Paperwhite'
+description = '''
+A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript
+'''
 theme = 'paperwhite'
 
 [markup]
@@ -12,6 +15,17 @@ theme = 'paperwhite'
 # [services]
 #   [services.googleAnalytics]
 #     id = 'G-MEASUREMENT_ID'
+
+[params]
+
+  author = 'Nickolas Kraus'
+
+  [params.seo]
+    image = 'logo.png'
+    twitter_card = 'summary'
+    twitter_site = '@nickolashkraus'
+    twitter_creator = '@nickolashkraus'
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
