@@ -73,7 +73,7 @@
   -->
 
   <!-- Required -->
-  <meta property="og:title" content="{{ .Title }}" />
+  <meta property="og:title" content="{{ cond .IsHome site.Title .Title }}" />
   <meta property="og:type" content="{{ $type }}" />
   <meta property="og:image" content="{{ $image }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
@@ -95,7 +95,7 @@
   {{- if $twitter_creator }}
     <meta name="twitter:creator" content="{{ $twitter_creator }}" />
   {{ end }}
-  <meta name="twitter:title" content="{{ .Title }}" />
+  <meta name="twitter:title" content="{{ cond .IsHome site.Title .Title }}" />
   <meta name="twitter:description" content="{{ $description }}" />
   <meta name="twitter:image" content="{{ $image }}" />
 
