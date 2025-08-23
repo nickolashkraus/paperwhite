@@ -65,7 +65,7 @@
       background-color: var(--color-code-bg);
       font-weight: 400;
 
-      /* Remove backticks around `code` elements. */
+      /* Remove backticks around <code> elements. */
       &::before,
       &::after {
         content: none;
@@ -76,6 +76,14 @@
     ul,
     li {
       margin: 0;
+    }
+
+    blockquote p {
+      /* Remove double-quotes around <blockquote> elements. */
+      &::before,
+      &::after {
+        content: none;
+      }
     }
   }
 }
