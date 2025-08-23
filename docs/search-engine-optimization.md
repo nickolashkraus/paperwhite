@@ -91,7 +91,7 @@ SEO.
 The meta description is set using the following:
 
 ```html
-{{ $description := or .Description site.Params.description }}
+{{ $description := trim (or .Page.Description site.Params.description) " \n\r\t" }}
 <meta name="description" content="{{ $description }}" />
 ```
 
@@ -101,9 +101,11 @@ description for each page:
 `hugo.toml`
 
 ```toml
-description = '''
-A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript
-'''
+[params]
+
+  description = '''
+  A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript
+  '''
 ```
 
 `search-engine-optimization.md`

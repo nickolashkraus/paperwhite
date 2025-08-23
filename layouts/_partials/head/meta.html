@@ -10,7 +10,7 @@
         twitter:description and JSON-LD description property
   -->
   {{ $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
-  {{ $description := or .Description site.Params.description }}
+  {{ $description := trim (or .Page.Description site.Params.description) " \n\r\t" }}
 
 
   <!--

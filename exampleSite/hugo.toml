@@ -1,9 +1,6 @@
 baseURL = 'https://paperwhite.nickolaskraus.io'
 languageCode = 'en-US'
 title = 'Paperwhite'
-description = '''
-A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript
-'''
 theme = 'paperwhite'
 
 [markup]
@@ -19,6 +16,9 @@ theme = 'paperwhite'
 [params]
 
   author = 'Nickolas Kraus'
+  description = '''
+  A minimalist Hugo theme using Tailwind CSS and vanilla JavaScript
+  '''
 
   [params.seo]
     image = 'logo.png'
