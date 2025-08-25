@@ -136,10 +136,13 @@ const appendTooltipToRef = (ref, content) => {
   const tooltipContent = document.createElement('p')
 
   // Extract the footnote number from the footnote reference and create a new
-  // `<sup>` element.
+  // `<sup>` element with a link.
   const footnoteNumber = ref.textContent.trim()
   const footnoteNumberSup = document.createElement('sup')
-  footnoteNumberSup.textContent = footnoteNumber
+  const footnoteLink = document.createElement('a')
+  footnoteLink.href = ref.getAttribute('href')
+  footnoteLink.textContent = footnoteNumber
+  footnoteNumberSup.appendChild(footnoteLink)
 
   // Add footnote reference number and footnote content to the tooltip.
   tooltipContent.innerHTML =
