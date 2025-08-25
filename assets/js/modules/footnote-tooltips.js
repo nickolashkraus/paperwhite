@@ -109,17 +109,15 @@ const getFootnoteIdFromRef = (ref) => {
 
 /**
  * Extract the footnote content from the footnote element.
- * The back reference (↩︎) is removed.
+ * All back references (↩︎) are removed.
  * @param {HTMLElement} footnote - The footnote element.
  * @returns {Element} - A clone of the footnote element.
  */
 const getFootnoteContent = (footnote) => {
   const footnoteContent = footnote.cloneNode(true)
-  const backref = footnoteContent.querySelector('.footnote-backref')
+  const backrefs = footnoteContent.querySelectorAll('.footnote-backref')
 
-  if (backref) {
-    backref.remove()
-  }
+  backrefs.forEach((backref) => backref.remove())
 
   return footnoteContent
 }
