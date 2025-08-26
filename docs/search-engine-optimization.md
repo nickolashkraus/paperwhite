@@ -208,7 +208,7 @@ on the type specified, other properties may also be required.
 **`og:image`**  
 The image to accompany a social post. This must be an absolute URL to an image.
 The image should be around 1200x630 pixels and under 5MB for reliable
-loading[^3].
+loading.[^3]
 
 **`og:url`**  
 The canonical URL for the content, similar to the canonical tag. It is the

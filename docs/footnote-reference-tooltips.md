@@ -1,7 +1,7 @@
 # Footnote Reference Tooltips
 
 This theme provides functionality for footnote reference tooltips. For example,
-this is a sentence with a footnote[^1]. This functionality is provided by the
+this is a sentence with a footnote.[^1] This functionality is provided by the
 `footnote-tooltips.js` JavaScript module.
 
 ## What does this module do?
