@@ -151,7 +151,7 @@ const appendTooltipToRef = (ref, content) => {
   // Create `has-footnote-tooltip` wrapper for the footnote reference and
   // tooltip.
   const wrapper = document.createElement('span')
-  wrapper.className = 'has-footnote-tooltip'
+  wrapper.classList.add('has-footnote-tooltip')
 
   // Clone the original footnote reference element, so we retain its original
   // attributes.
@@ -159,7 +159,7 @@ const appendTooltipToRef = (ref, content) => {
 
   // Create the tooltip element.
   const tooltip = document.createElement('span')
-  tooltip.className = 'footnote-tooltip'
+  tooltip.classList.add('footnote-tooltip')
   tooltip.innerHTML = tooltipContent.innerHTML
 
   wrapper.appendChild(refClone)
