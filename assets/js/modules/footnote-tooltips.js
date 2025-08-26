@@ -175,4 +175,60 @@ const appendTooltipToRef = (ref, content) => {
   // Replace the original footnote reference (`<sup>`) with the wrapped
   // version.
   sup.replaceWith(wrapper)
+
+  // Set the tooltip's position.
+  setTooltipPosition(tooltip)
+}
+
+/**
+ * Set the position of the tooltip element.
+ *
+ * The tooltip is centered under the `has-footnote-tooltip` wrapper and within
+ * the bounds of the parent element.
+ *
+ * @param {HTMLElement} tooltip - The tooltip element.
+ */
+const setTooltipPosition = (tooltip) => {
+  const wrapper = tooltip.closest('.has-footnote-tooltip')
+  if (!wrapper) return
+
+  // Get the parent element of the tooltip wrapper.
+  const parent = wrapper.parentElement
+  if (!parent) return
+
+  const tooltipRect = tooltip.getBoundingClientRect()
+  const wrapperRect = wrapper.getBoundingClientRect()
+  const parentRect = parent.getBoundingClientRect()
+
+  // Reset any previous positioning.
+  tooltip.style.transform = ''
+
+  // First, determine the position of the tooltip when centered under the
+  // wrapper.
+  //
+  // The center of the wrapper is calculated using the following:
+  //
+  //   wrapperCenter = wrapperLeft + (wrapperWidth / 2)
+  //
+  // The left position of the tooltip is then:
+  //
+  //   tooltipLeft = wrapperCenter - (tooltipWidth / 2)
+  const wrapperCenter = wrapperRect.left + wrapperRect.width / 2
+  let tooltipLeft = wrapperCenter - tooltipRect.width / 2
+
+  // Next, adjust the left position of the tooltip if it extends beyond the
+  // bounds of the parent element.
+  if (tooltipLeft < parentRect.left) {
+    // If the tooltip extends beyond left edge of parent element, align it with
+    // the left position of the parent with padding.
+    tooltipLeft = parentRect.left + 20
+  } else if (tooltipLeft + tooltipRect.width > parentRect.right) {
+    // If the tooltip extends beyond right edge of parent element, align it
+    // with the right position of the parent with padding.
+    tooltipLeft = parentRect.right - tooltipRect.width - 20
+  }
+
+  // Apply the position relative to the viewport.
+  const tooltipOffsetLeft = Math.round(tooltipLeft) - wrapperRect.left
+  tooltip.style.transform = `translateX(${tooltipOffsetLeft}px)`
 }
