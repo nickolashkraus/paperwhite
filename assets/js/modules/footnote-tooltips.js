@@ -165,6 +165,13 @@ const appendTooltipToRef = (ref, content) => {
   wrapper.appendChild(refClone)
   wrapper.appendChild(tooltip)
 
+  // If a click event occurs outside of the tooltip, hide the tooltip.
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      tooltip.classList.remove('visible')
+    }
+  })
+
   // Replace the original footnote reference (`<sup>`) with the wrapped
   // version.
   sup.replaceWith(wrapper)
