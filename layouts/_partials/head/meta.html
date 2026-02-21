@@ -1,5 +1,6 @@
 {{ block "meta_tags" . }}
   {{ $type := cond .IsPage "article" "website" }}
+  {{ $schemaType := cond .IsPage "Article" "WebSite" }}
 
 
   <!--
@@ -107,8 +108,8 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "{{ $type }}",
-    {{- if eq $type "website" }}
+    "@type": "{{ $schemaType }}",
+    {{- if eq $schemaType "WebSite" }}
     "name": "{{ site.Title }}",
     {{- else }}
     "headline": "{{ .Title }}",
