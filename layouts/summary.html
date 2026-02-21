@@ -22,7 +22,7 @@
             <li class="mx-2">•</li>
           {{ end }}
           <li>
-            <a href="/tags/{{ $tag }}">{{ $tag }}</a>
+            <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>
           </li>
         {{ end }}
       </ul>
