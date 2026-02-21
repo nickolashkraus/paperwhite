@@ -13,7 +13,7 @@ footnote reference.
 
 ## How does it work?
 
-Hugo (via Goldmark) renders footnotes references as `<sup>` elements with the
+Hugo (via Goldmark) renders footnote references as `<sup>` elements with the
 following form:
 
 **HTML**
