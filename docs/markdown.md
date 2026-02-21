@@ -156,7 +156,7 @@ __*Bold and italic mixed*__
 
 * You can also use asterisks
 
-- Or plus signs
++ Or plus signs
 ```
 
 - First item
@@ -168,7 +168,7 @@ __*Bold and italic mixed*__
 
 * You can also use asterisks
 
-- Or plus signs
++ Or plus signs
 
 ### Code
 
