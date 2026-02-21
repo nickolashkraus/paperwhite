@@ -80,7 +80,10 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   <!-- Optional -->
   <meta property="og:description" content="{{ $description }}" />
-  <meta property="og:locale" content="{{ site.LanguageCode | default "en-US" }}" />
+  <meta
+    property="og:locale"
+    content="{{ replace (site.LanguageCode | default "en_US") "-" "_" }}"
+  />
   <meta property="og:site_name" content="{{ site.Title }}" />
 
   <!--
