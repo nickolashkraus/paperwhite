@@ -52,13 +52,15 @@ For documentation on configuring SEO and social media appearance, see the
 
 ## Social Links (with Font Awesome icons)
 
-Social links (with Font Awesome icons) can be added via the configuration file.
+Social links (with [Font Awesome](https://fontawesome.com) icons) can be added
+via the configuration file.
 
 ```toml
-[[params.socials]]
-  icon = 'fa-sharp fa-regular fa-envelope'
-  name = 'Email'
-  url = 'mailto:0x@nickolaskraus.io'
+[params]
+  [[params.socials]]
+    icon = 'fa-sharp fa-regular fa-envelope'
+    name = 'Email'
+    url = 'mailto:0x@nickolaskraus.io'
 ```
 
 ## Development
