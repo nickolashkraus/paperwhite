@@ -58,7 +58,7 @@
  */
 
 // Export the initialization function.
-export const initTableOfContents = () => {
+export const initTableOfContentsScrollspy = () => {
   // The table of contents rendered by Hugo uses the "#TableOfContents" ID.
   // An anchor element (<a>) is used for each heading.
   const tocLinks = document.querySelectorAll('#TableOfContents a')
