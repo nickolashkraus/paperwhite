@@ -1,6 +1,7 @@
 {{ define "main" }}
   <!-- Only show a table of contents if it exists. -->
-  {{ $tocLength := findRE "<li>" .TableOfContents | len }}
+  {{ $toc := .TableOfContents }}
+  {{ $tocLength := findRE "<li>" $toc | len }}
   {{ $hasTOC := gt $tocLength 0 }}
 
   {{ if $hasTOC }}
@@ -10,7 +11,7 @@
         <aside class="sticky top-4 h-[80vh] w-48 overflow-x-hidden overflow-y-auto lg:max-h-screen">
           <h2 class="pb-4 text-2xl">Contents</h2>
           <div class="mb-12 max-w-full break-words">
-            {{ .TableOfContents }}
+            {{ $toc }}
           </div>
         </aside>
       </div>
